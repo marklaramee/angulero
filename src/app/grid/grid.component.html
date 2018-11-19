@@ -13,14 +13,16 @@
     </select>
   </form>
 </div>
+<h2>American IPAs</h2>
+<h5>Use the buttons below to filter them by hops</h5>
 <div id="tagButtons">
-    <div 
-      *ngFor='let tag of allTags' 
-      (click)="filterbyTag($event)" 
-      [className]="'tagButton'"
-    >
-      {{tag}}
-    </div>
+  <div 
+    *ngFor='let tag of allTags' 
+    (click)="filterbyTag($event)" 
+    [className]="'tagButton'"
+  >
+    {{tag}}
+  </div>
 </div>
 <div id="cardContainer">
   <app-card *ngFor="let card of displayCards" [card]="card"></app-card>

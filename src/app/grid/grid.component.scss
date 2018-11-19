@@ -1,5 +1,15 @@
 @import '../scss/variables';
 
+h2 {
+  margin: 0;
+  padding: 0;
+}
+h5 {
+  margin: 0;
+  padding: 4px 0 20px 0;
+}
+
+
 #tagButtons {
   @include flexify();
   font-family: $font-stack;

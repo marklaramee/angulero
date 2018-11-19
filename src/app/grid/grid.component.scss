@@ -1,0 +1,64 @@
+@import '../scss/variables';
+
+#tagButtons {
+  @include flexify();
+  font-family: $font-stack;
+  justify-content: center;
+  width: $large;
+}
+
+.tagButton {
+  border: 1px solid $verydarkblue;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  margin: 0 6px 10px 6px;
+  padding: 3px 6px;
+  text-transform: uppercase;
+
+  &.activeTag {
+    background: $tgreen1;
+    color: white;
+  }
+}
+
+#cardContainer {
+  @include flexify();
+  font-family: $font-stack;
+  justify-content: flex-start;
+  padding: 20px 0 0 9px;
+  width: $large;
+}
+
+#mobileTagContainer {
+  display: none;
+}
+
+@media only screen and (max-width: $large) {
+  #cardContainer, #tagButtons {
+    margin-left: auto;
+    margin-right: auto;
+    width: $medium;
+  }
+}
+
+@media only screen and (max-width: $medium) {
+  #cardContainer {
+    padding: 14px 0 0 0px;
+    width: 568px; 
+  }
+  #tagButtons {
+    width: 80%; 
+  }
+}
+
+@media only screen and (max-width: $small) {
+  #cardContainer {
+    display: block;
+    text-align: center;
+    width: 304px;
+  }
+}
+
+

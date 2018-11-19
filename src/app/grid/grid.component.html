@@ -1,0 +1,27 @@
+<div id="mobileTagContainer">
+  <form #mobileTagForm="ngForm">
+    <select 
+      id="mobileTags"
+      name="mobiletags" 
+      multiple
+      [(ngModel)]="activeTags" 
+      (ngModelChange)="onTagChange()"
+      >
+      <option *ngFor="let tag of allTags" [value]="tag">  
+        {{tag}}
+      </option>
+    </select>
+  </form>
+</div>
+<div id="tagButtons">
+    <div 
+      *ngFor='let tag of allTags' 
+      (click)="filterbyTag($event)" 
+      [className]="'tagButton'"
+    >
+      {{tag}}
+    </div>
+</div>
+<div id="cardContainer">
+  <app-card *ngFor="let card of displayCards" [card]="card"></app-card>
+</div>

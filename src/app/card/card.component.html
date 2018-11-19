@@ -1,0 +1,26 @@
+
+<div [className]="'card-outer'">
+  <div [className]="'card card-front'">
+    <img src="{{card.image}}" [className]="'card-image'" />
+    <div *ngIf="card.featured" class="featuredBadge">
+      FEATURED
+    </div>
+    <div [className]="'card-inner'">
+      <h3>{{card.title}}</h3>
+      <div class="card-description">
+        {{card.description | truncate : 400 : true}}
+      </div>
+    </div>
+  </div>
+  <div [className]="'card card-back'">
+    <img src="{{card.image}}" [className]="'card-image'" />
+    <div [className]="'card-inner'">
+      <h3>{{card.title}}</h3>
+      <div [className]="'card-tags'">
+        <div *ngFor="let tag of card.tags" [className]="'card-tag'">
+          {{tag}}
+        </div>
+    </div>
+  </div>
+</div>
+

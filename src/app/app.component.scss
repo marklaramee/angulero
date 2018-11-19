@@ -1,0 +1,36 @@
+@import './scss/variables';
+
+body {
+  color:$font-color;
+  font-family: $font-stack;
+}
+
+nav {
+  display: none;
+}
+
+#outerContainer { 
+  padding: 20px 0 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+#content {
+  margin: 0 auto;
+  max-width: $large;
+}
+
+#siteTitle {
+  color: $blue1;
+  font-size: 86px;
+  padding: 0 0 40px 0;
+}
+#siteTitle-2 {
+  color: $blue2;
+}
+#siteTitle-3 {
+  color: $blue3;
+}
+#siteTitle-4 {
+  color: $blue4;
+}

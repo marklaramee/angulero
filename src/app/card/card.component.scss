@@ -1,0 +1,197 @@
+@import '../scss/variables';
+
+.card {
+  border: 2px solid $darkblue1;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 12px;
+  height: 400px;
+  left: 0;
+  overflow: hidden;
+  padding: 0 0 6px 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 1s, transform 1s;
+  width: 370px;
+
+  .featuredContainer {
+    height: 80px;
+    position:relative;
+    width: 100%;
+  }
+
+  .featuredBadge {
+    background: $tgreen2;
+    color: white; 
+    font-style: italic;
+    font-size: 14px;
+    font-weight: bold;
+    height: 20px;
+    padding-top: 2px;
+    position:absolute;
+    right: -30px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    top: 30px;
+    width: 140px;
+  }
+
+  .card-image {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+
+  .card-inner {
+    padding: 10px;
+
+    h3 {
+      font-size: 18px;
+      line-height: 1.5;
+      margin: 0;
+      padding: 0 0 6px 0;
+    }
+  }
+
+  .card-description {
+    text-align: left;
+  }
+
+  .card-tags {
+    text-align: left;
+
+    .card-tag {
+      background: $tgreen2;
+      color: white;
+      display: inline-block;
+      margin: 0 10px 8px 0;
+      padding: 2px 6px 3px 6px;
+    }
+  }
+}
+
+.card-back {
+
+  .card-image {
+    opacity: (0.5);
+    transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+  }
+} 
+
+.card-outer {
+  height: 400px;
+  margin: 0 12px 25px;
+  position: relative;
+  width: 370px;
+
+  .card-front {
+    @include cardOn();
+  }
+  .card-back {
+    @include cardOff();
+  }
+
+  &:active, &:hover {
+    .card-front {
+      @include cardOff();
+    }
+    .card-back {
+      @include cardOn();
+    }
+  }
+}
+
+@media only screen and (max-width: $medium) {
+  .card-outer {
+    height: 396px;
+    margin: 0 12px 25px; //unchanged
+    width: 260px;
+  }
+  .card {
+    border: 2px solid black; //unchanged
+    font-size: 11px;
+    height: 396px;
+    padding: 0 0 4px 0;
+    width: 260px;
+
+    .card-inner {
+
+
+      h3 {
+        font-size: 14px;
+        margin: 0;
+        padding: 0 0 6px 0;
+      }
+    }
+
+    .card-tags {
+      padding-top: 5px;
+
+      .card-tag {
+        font-size: 12px; 
+        margin: 0 8px 6px 0; 
+        padding: 2px 4px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $small) {
+  .card-outer {
+    display: inline-block;
+    height: 400px;
+    margin: 0 6px 10px; 
+    text-align: center;
+    width: 260px;
+  }
+  .card {
+    border: 2px solid black; //unchanged
+    font-size: 11px;
+    height: 400px;
+    padding: 0 0 4px 0;
+    width: 260px;
+
+    .card-description {
+      padding-top: 10px;
+    }
+
+    .featuredBadge {
+      font-size: 11px;
+      height: 16px;
+      padding-top: 2px;
+      position:absolute;
+      right: -24px;
+      top: 20px;
+      width: 100px;
+    }
+
+    .card-inner {
+      padding: 10px 10px 10px 10px;
+
+      h3 {
+        font-size: 14px;
+        margin: 0;
+        padding: 0 0 4px 0;
+      }
+    }
+
+    .card-tags {
+      font-size: 12px;
+      padding-top: 8px;
+
+      .card-tag {
+        margin: 0 8px 6px 0; 
+        padding: 2px 4px;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+

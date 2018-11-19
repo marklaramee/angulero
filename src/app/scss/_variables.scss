@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One');
+
+$large: 1200px;
+$medium: 800px;
+$small: 600px;
+$ex-small: 400px;
+
+$font-color: black;
+$font-stack: Verdana, sans-serif;
+
+
+$blue1: #1a379d;
+$blue2: #5990d1;
+$blue3: #4e8cef;
+$blue4: #6a8db7;
+
+$darkblue1: #0a2165;
+
+
+
+
+$tblue2: #3f5996;
+$tblue3: #2111f5;
+$tblue6: #3f5996;
+$tblue7: #24448d;
+
+$tdarkBlue2: #183885;
+$tdarkBlue3: #204794;
+$tdarkblue4: #254e9d;
+
+$tdarkblue6: #283c83;
+$tdarkblue7: #274e9d;
+
+$verydarkblue: #0d1e56;
+
+$darkgray: #2a2d3e;
+$lightgray: #b0b0b2;
+
+$grayblue: #38526d;
+$grayblue2: #37405d;
+
+
+$tgreen1: #1f4d02;
+$tgreen2: #315817;
+$tgreen3: #627d5a;
+$tgreen4: #4b8531;
+$tgreen5: #7d995e;
+$tgreen6: #121f0e;
+$tgreen7: #243a23;
+
+
+@mixin flexify() {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin cardOn() {
+  opacity: 1;
+  transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg); 
+}
+
+@mixin cardOff() {
+  opacity: 0;
+  transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg); 
+}

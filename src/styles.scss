@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import './app/scss/variables';
+
+body {
+  color:$verydarkblue;
+  font-family: $font-stack;
+  margin: 0;
+  padding: 0;
+}
+
+.display {
+  font-family: 'Fredoka One', cursive;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: lowercase;
+}
+
+h1 {
+  margin: 0;
+  padding: 0;
+}
